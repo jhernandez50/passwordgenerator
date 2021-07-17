@@ -15,6 +15,8 @@ function generatePassword(){
 
   var charNum = prompt("Chose character length (between 8 and 256)")
   var specialChar = confirm("Do you want special characters?")
+
+  /* Create two options, one with special character and the other one with regular letters */
   
   var specialLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!!#$%&/()=?¡*][}{";
   var normalLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
@@ -22,25 +24,25 @@ function generatePassword(){
   
   if(specialChar){
    
-   
+  /* Chose a random digit from specialLetters array */ 
+
     for (var i=0; i <= charNum ; i++ ){
         let generate = specialLetters[Math.floor(Math.random() * specialLetters.length)];
         result += generate
    }
-   /* 
-  document.getElementById("password").innerHTML = result; */
+  
   
   return result
   
   }
   
   else {
-  
+   /* Chose a random digit from charNum array */ 
+
       for (var i=0; i <= charNum ; i++ ){
           let generate =normalLetters[Math.floor(Math.random() * normalLetters.length)];
           result += generate}   
-  /*
-          document.getElementById("password").innerHTML = result; */
+
   }
   return result
   
